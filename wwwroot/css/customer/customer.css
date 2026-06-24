@@ -1,0 +1,118 @@
+/* ==========================================
+   CogStay Customer Portal (Guest) Stylesheet
+   ========================================== */
+
+/* Room filters layout */
+.cogstay-filter-bar {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cogstay-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 150px;
+}
+
+/* Booking form checkout layout */
+.booking-checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .booking-checkout-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-summary-card {
+  position: sticky;
+  top: 100px;
+}
+
+.booking-price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.booking-price-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+/* Star Rating component styling */
+.rating-stars {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+  color: var(--color-border);
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.rating-stars i:hover,
+.rating-stars i.active {
+  color: var(--color-accent);
+}
+
+/* Profile details */
+.profile-header-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px;
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 30px;
+}
+
+.profile-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 3px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-accent-light);
+}
+
+/* Room grid view (Customer area override) */
+.customer-rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .customer-rooms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-rooms-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,102 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Assign Tasks";
+    ViewData["Role"] = "Housekeeping";
+}
+
+<div style="margin-bottom: 30px;">
+    <h1 style="font-family: var(--font-serif); font-size: 32px; color: var(--color-primary-dark);">CogStay Housekeeping Task Assignment</h1>
+    <p style="color: var(--color-text-muted);">Allocate room cleaning sheets, laundry valet logs, and maintenance tickets to specific housekeeping rosters.</p>
+</div>
+
+<div class="booking-checkout-container" style="grid-template-columns: 1.5fr 1fr;">
+    <!-- Left Column: Assignment Form -->
+    <div class="cogstay-card">
+        <div class="cogstay-card-header">
+            <h3 class="cogstay-card-title"><i class="fa-solid fa-clipboard-user"></i> Allocate Task</h3>
+        </div>
+        <div class="cogstay-card-body">
+            <form method="post" action="/Housekeeping/Housekeeping/Dashboard" data-success-message="Housekeeping task allocated successfully!" data-redirect="/Housekeeping/Housekeeping/Dashboard">
+                <div class="cogstay-form-row">
+                    <div class="cogstay-form-group">
+                        <label class="cogstay-form-label">Roster Employee</label>
+                        <select class="cogstay-form-control" required>
+                            <option value="mary">Mary Poppins (Day Shift)</option>
+                            <option value="bruce">Bruce Wayne (Night Shift)</option>
+                            <option value="peter">Peter Parker (Standby)</option>
+                        </select>
+                    </div>
+
+                    <div class="cogstay-form-group">
+                        <label class="cogstay-form-label">Room Number</label>
+                        <input type="text" class="cogstay-form-control" placeholder="e.g. Room 304" required />
+                    </div>
+                </div>
+
+                <div class="cogstay-form-row">
+                    <div class="cogstay-form-group">
+                        <label class="cogstay-form-label">Task Category</label>
+                        <select class="cogstay-form-control" required>
+                            <option value="checkout">Checkout Clean (Urgent)</option>
+                            <option value="stayover">Stay-over Touch-up Clean</option>
+                            <option value="deep">Deep Sanitization Clean</option>
+                            <option value="laundry">Laundry collection & Valet</option>
+                            <option value="minibar">Restock Room Mini-Bar</option>
+                        </select>
+                    </div>
+
+                    <div class="cogstay-form-group">
+                        <label class="cogstay-form-label">Priority Level</label>
+                        <select class="cogstay-form-control" required>
+                            <option value="low">Low Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="high">High / Urgent Priority</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cogstay-form-group">
+                    <label class="cogstay-form-label">Special Roster Instructions</label>
+                    <textarea class="cogstay-form-control" rows="4" placeholder="e.g. Guest checked out late. Please replace standard toiletries pack with luxury spa bath set..."></textarea>
+                </div>
+
+                <div style="border-top: 1px solid var(--color-border); padding-top: 20px; display: flex; justify-content: flex-end; gap: 12px;">
+                    <a href="/Housekeeping/Housekeeping/Dashboard" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary" style="background-color: var(--accent-housekeeping);"><i class="fa-solid fa-save"></i> Allocate Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Right Column: Employee status indicators -->
+    <div class="cogstay-card">
+        <div class="cogstay-card-header">
+            <h3 class="cogstay-card-title"><i class="fa-solid fa-users"></i> Housekeeper Roster Status</h3>
+        </div>
+        <div class="cogstay-card-body" style="padding-top: 10px; padding-bottom: 10px;">
+            <div style="padding: 12px 0; border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 600; color: var(--color-primary-dark);">Mary Poppins</h4>
+                    <span style="font-size: 11px; color: var(--color-text-muted);">Assigned: 2 Rooms &bull; Shift: Day</span>
+                </div>
+                <span class="cogstay-badge success">Active</span>
+            </div>
+
+            <div style="padding: 12px 0; border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 600; color: var(--color-primary-dark);">Bruce Wayne</h4>
+                    <span style="font-size: 11px; color: var(--color-text-muted);">Assigned: 2 Rooms &bull; Shift: Night</span>
+                </div>
+                <span class="cogstay-badge success">Active</span>
+            </div>
+
+            <div style="padding: 12px 0; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 600; color: var(--color-primary-dark);">Peter Parker</h4>
+                    <span style="font-size: 11px; color: var(--color-text-muted);">Assigned: 0 Rooms &bull; Shift: On-Call</span>
+                </div>
+                <span class="cogstay-badge warning">On Leave</span>
+            </div>
+        </div>
+    </div>
+</div>

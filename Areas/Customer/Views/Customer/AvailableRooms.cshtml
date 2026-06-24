@@ -1,0 +1,159 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Available Rooms";
+    ViewData["Role"] = "Customer";
+}
+
+<div style="margin-bottom: 30px;">
+    <h1 style="font-family: var(--font-serif); font-size: 32px; color: var(--color-primary-dark);">CogStay Room Booking</h1>
+    <p style="color: var(--color-text-muted);">Explore our premium rooms, check room amenities, and book your stay.</p>
+</div>
+
+<!-- Filters Bar -->
+<div class="cogstay-filter-bar">
+    <div class="cogstay-filter-group">
+        <label class="cogstay-form-label" style="margin-bottom: 2px;">Room Type</label>
+        <select id="filter-room-type" class="cogstay-form-control" style="padding: 8px 12px;">
+            <option value="all">All Rooms</option>
+            <option value="standard">Standard King</option>
+            <option value="deluxe">Deluxe Room</option>
+            <option value="suite">Penthouse Suite</option>
+        </select>
+    </div>
+
+    <div class="cogstay-filter-group">
+        <label class="cogstay-form-label" style="margin-bottom: 2px;">Price Sort</label>
+        <select id="filter-price" class="cogstay-form-control" style="padding: 8px 12px;">
+            <option value="default">No Sort</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+    </div>
+
+    <div style="margin-left: auto;">
+        <span style="font-size: 13px; color: var(--color-text-muted);">Showing 6 premium options</span>
+    </div>
+</div>
+
+<!-- Customer Rooms Grid (6 items) -->
+<div class="customer-rooms-grid">
+    <!-- Room 1 -->
+    <div class="cogstay-room-card" data-room-type="deluxe" data-room-price="180">
+        <div class="cogstay-room-image" style="background-image: url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=85')">
+            <span class="cogstay-room-badge">Available</span>
+        </div>
+        <div class="cogstay-room-body">
+            <h3 class="cogstay-room-title">Deluxe Executive Room 301</h3>
+            <p style="color: var(--color-text-muted); font-size: 13px; margin-bottom: 12px;">Comfortable city views, dedicated workspace desk, high-speed fibre internet.</p>
+            <ul class="cogstay-room-amenities">
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-wifi"></i> Wifi</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-bed"></i> King Bed</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-coffee"></i> Coffee</li>
+            </ul>
+            <div class="cogstay-room-footer">
+                <div class="cogstay-room-price">$180 <span>/ night</span></div>
+                <a href="/Customer/Customer/BookRoom?type=deluxe" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room 2 -->
+    <div class="cogstay-room-card" data-room-type="suite" data-room-price="350">
+        <div class="cogstay-room-image" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=85')">
+            <span class="cogstay-room-badge">Available</span>
+        </div>
+        <div class="cogstay-room-body">
+            <h3 class="cogstay-room-title">Penthouse Suite 304</h3>
+            <p style="color: var(--color-text-muted); font-size: 13px; margin-bottom: 12px;">Top-floor expansive views, lounge room, dining table, private hot tub.</p>
+            <ul class="cogstay-room-amenities">
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-hot-tub-person"></i> Hot Tub</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-wine-glass"></i> Minibar</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-couch"></i> Lounge</li>
+            </ul>
+            <div class="cogstay-room-footer">
+                <div class="cogstay-room-price">$350 <span>/ night</span></div>
+                <a href="/Customer/Customer/BookRoom?type=suite" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room 3 -->
+    <div class="cogstay-room-card" data-room-type="standard" data-room-price="140">
+        <div class="cogstay-room-image" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=85')">
+            <span class="cogstay-room-badge">Available</span>
+        </div>
+        <div class="cogstay-room-body">
+            <h3 class="cogstay-room-title">Superior King 201</h3>
+            <p style="color: var(--color-text-muted); font-size: 13px; margin-bottom: 12px;">Plush bedding, modern layout shower, garden views, standard amenities.</p>
+            <ul class="cogstay-room-amenities">
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-wifi"></i> Wifi</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-snowflake"></i> AC</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-tv"></i> TV</li>
+            </ul>
+            <div class="cogstay-room-footer">
+                <div class="cogstay-room-price">$140 <span>/ night</span></div>
+                <a href="/Customer/Customer/BookRoom?type=standard" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room 4 -->
+    <div class="cogstay-room-card" data-room-type="deluxe" data-room-price="185">
+        <div class="cogstay-room-image" style="background-image: url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=85')">
+            <span class="cogstay-room-badge">Available</span>
+        </div>
+        <div class="cogstay-room-body">
+            <h3 class="cogstay-room-title">Deluxe Executive Room 302</h3>
+            <p style="color: var(--color-text-muted); font-size: 13px; margin-bottom: 12px;">Double queen bedding configuration, balcony, coffee machine, desk.</p>
+            <ul class="cogstay-room-amenities">
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-wifi"></i> Wifi</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-users"></i> Sleeps 4</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-coffee"></i> Nespresso</li>
+            </ul>
+            <div class="cogstay-room-footer">
+                <div class="cogstay-room-price">$185 <span>/ night</span></div>
+                <a href="/Customer/Customer/BookRoom?type=deluxe" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room 5 -->
+    <div class="cogstay-room-card" data-room-type="suite" data-room-price="360">
+        <div class="cogstay-room-image" style="background-image: url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=85')">
+            <span class="cogstay-room-badge">Available</span>
+        </div>
+        <div class="cogstay-room-body">
+            <h3 class="cogstay-room-title">Presidential Suite 401</h3>
+            <p style="color: var(--color-text-muted); font-size: 13px; margin-bottom: 12px;">Extra large king master suite, bar area, bath amenities, private terrace.</p>
+            <ul class="cogstay-room-amenities">
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-martini-glass-citrus"></i> Bar</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-bath"></i> Marble Tub</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-sun"></i> Terrace</li>
+            </ul>
+            <div class="cogstay-room-footer">
+                <div class="cogstay-room-price">$360 <span>/ night</span></div>
+                <a href="/Customer/Customer/BookRoom?type=suite" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room 6 -->
+    <div class="cogstay-room-card" data-room-type="standard" data-room-price="135">
+        <div class="cogstay-room-image" style="background-image: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=85')">
+            <span class="cogstay-room-badge">Available</span>
+        </div>
+        <div class="cogstay-room-body">
+            <h3 class="cogstay-room-title">Superior King 202</h3>
+            <p style="color: var(--color-text-muted); font-size: 13px; margin-bottom: 12px;">Standard bedding, walk-in shower room, smart thermostat control.</p>
+            <ul class="cogstay-room-amenities">
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-wifi"></i> Wifi</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-snowflake"></i> AC</li>
+                <li class="cogstay-room-amenity"><i class="fa-solid fa-tv"></i> TV</li>
+            </ul>
+            <div class="cogstay-room-footer">
+                <div class="cogstay-room-price">$135 <span>/ night</span></div>
+                <a href="/Customer/Customer/BookRoom?type=standard" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+        </div>
+    </div>
+</div>
