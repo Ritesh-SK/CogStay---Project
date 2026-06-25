@@ -43,6 +43,7 @@
                     <th>Rate Total</th>
                     <th>Payment</th>
                     <th>Stay Status</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,9 +53,12 @@
                     <td>Room 304 - Penthouse Suite</td>
                     <td>Jun 24 - Jun 28, 2026</td>
                     <td>2</td>
-                    <td>$1,568.00</td>
-                    <td><span class="cogstay-badge warning">Partial ($120 bal)</span></td>
+                    <td>₹1,25,440.00</td>
+                    <td><span class="cogstay-badge warning">Partial (₹12,000 bal)</span></td>
                     <td><span class="cogstay-badge success">Checked In</span></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" onclick="downloadReceipt('CS-9024')"><i class="fa-solid fa-download"></i> Receipt</button>
+                    </td>
                 </tr>
 
                 <!-- Upcoming stay -->
@@ -63,9 +67,12 @@
                     <td>Room 301 - Deluxe Executive</td>
                     <td>Jul 15 - Jul 18, 2026</td>
                     <td>1</td>
-                    <td>$604.80</td>
+                    <td>₹48,384.00</td>
                     <td><span class="cogstay-badge info">Paid</span></td>
                     <td><span class="cogstay-badge info">Confirmed</span></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" onclick="downloadReceipt('CS-9288')"><i class="fa-solid fa-download"></i> Receipt</button>
+                    </td>
                 </tr>
 
                 <!-- Past stay 1 -->
@@ -74,9 +81,12 @@
                     <td>Room 201 - Superior King</td>
                     <td>May 10 - May 12, 2026</td>
                     <td>2</td>
-                    <td>$313.60</td>
+                    <td>₹25,088.00</td>
                     <td><span class="cogstay-badge success">Paid</span></td>
                     <td><span class="cogstay-badge success">Completed</span></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" onclick="downloadReceipt('CS-8711')"><i class="fa-solid fa-download"></i> Receipt</button>
+                    </td>
                 </tr>
 
                 <!-- Past stay 2 -->
@@ -85,9 +95,12 @@
                     <td>Room 202 - Superior King</td>
                     <td>Mar 04 - Mar 08, 2026</td>
                     <td>2</td>
-                    <td>$604.80</td>
+                    <td>₹48,384.00</td>
                     <td><span class="cogstay-badge success">Paid</span></td>
                     <td><span class="cogstay-badge success">Completed</span></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" onclick="downloadReceipt('CS-8430')"><i class="fa-solid fa-download"></i> Receipt</button>
+                    </td>
                 </tr>
 
                 <!-- Cancelled stay -->
@@ -96,9 +109,12 @@
                     <td>Room 302 - Deluxe Executive</td>
                     <td>Jan 12 - Jan 15, 2026</td>
                     <td>2</td>
-                    <td>$621.60</td>
+                    <td>₹49,728.00</td>
                     <td><span class="cogstay-badge danger">Refunded</span></td>
                     <td><span class="cogstay-badge danger">Cancelled</span></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" disabled style="opacity: 0.5;"><i class="fa-solid fa-ban"></i> N/A</button>
+                    </td>
                 </tr>
             </tbody>
         </table>

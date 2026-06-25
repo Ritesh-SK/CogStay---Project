@@ -7,7 +7,7 @@
   position: relative;
   background: linear-gradient(rgba(20, 40, 63, 0.75), rgba(20, 40, 63, 0.85)), 
               url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-  padding: 120px 24px 100px;
+  padding: 160px 24px 140px;
   text-align: center;
   color: #ffffff;
   display: flex;

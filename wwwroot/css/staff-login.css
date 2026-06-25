@@ -134,3 +134,92 @@
 .role-select-card.housekeeping:hover {
   border-color: var(--accent-housekeeping);
 }
+
+/* ==========================================
+   Split Layout Styles for Staff Role Selection
+   ========================================== */
+.split-login-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .split-login-container {
+    grid-template-columns: 1fr;
+  }
+  .split-login-hero {
+    display: none;
+  }
+}
+
+.split-login-hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  color: #ffffff;
+}
+
+.split-login-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(20, 40, 63, 0.95) 20%, rgba(20, 40, 63, 0.4) 100%);
+  z-index: 1;
+}
+
+.split-login-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.split-login-brand {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-accent-light);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.split-login-hero-content h1 {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.split-login-hero-content p {
+  color: #E3E0D8;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.split-login-panel {
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.split-login-panel-content {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

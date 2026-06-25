@@ -52,8 +52,9 @@
                             <td><span class="cogstay-badge info" style="background-color: rgba(107, 63, 160, 0.1); color: var(--accent-admin);">Admin</span></td>
                             <td>24/7 Support</td>
                             <td><span class="cogstay-badge success">Active</span></td>
-                            <td>
+                            <td style="display: flex; gap: 6px;">
                                 <button class="btn btn-secondary btn-sm" onclick="showToast('Lock Alert', 'Cannot modify system administrator accounts.', 'warning')">Configure</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: var(--color-danger); color: white; border: none; opacity: 0.5;" onclick="removeStaffRow(this, 'John Doe')"><i class="fa-solid fa-user-minus"></i> Remove</button>
                             </td>
                         </tr>
                         <tr>
@@ -62,8 +63,9 @@
                             <td><span class="cogstay-badge info" style="background-color: rgba(31, 58, 95, 0.1); color: var(--accent-manager);">Manager</span></td>
                             <td>Day Shift</td>
                             <td><span class="cogstay-badge success">Active</span></td>
-                            <td>
+                            <td style="display: flex; gap: 6px;">
                                 <button class="btn btn-secondary btn-sm" onclick="showToast('Action Logged', 'Editing Robert Downey shift.', 'info')">Configure</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: var(--color-danger); color: white; border: none;" onclick="removeStaffRow(this, 'Robert Downey')"><i class="fa-solid fa-user-minus"></i> Remove</button>
                             </td>
                         </tr>
                         <tr>
@@ -72,8 +74,9 @@
                             <td><span class="cogstay-badge info" style="background-color: rgba(46, 111, 149, 0.1); color: var(--accent-frontdesk);">Front Desk</span></td>
                             <td>Night Shift</td>
                             <td><span class="cogstay-badge success">Active</span></td>
-                            <td>
+                            <td style="display: flex; gap: 6px;">
                                 <button class="btn btn-secondary btn-sm" onclick="showToast('Action Logged', 'Editing John Smith shift.', 'info')">Configure</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: var(--color-danger); color: white; border: none;" onclick="removeStaffRow(this, 'John Smith')"><i class="fa-solid fa-user-minus"></i> Remove</button>
                             </td>
                         </tr>
                         <tr>
@@ -82,8 +85,9 @@
                             <td><span class="cogstay-badge info" style="background-color: rgba(46, 111, 149, 0.1); color: var(--accent-frontdesk);">Front Desk</span></td>
                             <td>Day Shift</td>
                             <td><span class="cogstay-badge success">Active</span></td>
-                            <td>
+                            <td style="display: flex; gap: 6px;">
                                 <button class="btn btn-secondary btn-sm" onclick="showToast('Action Logged', 'Editing Sarah Connor shift.', 'info')">Configure</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: var(--color-danger); color: white; border: none;" onclick="removeStaffRow(this, 'Sarah Connor')"><i class="fa-solid fa-user-minus"></i> Remove</button>
                             </td>
                         </tr>
                         <tr>
@@ -92,8 +96,9 @@
                             <td><span class="cogstay-badge info" style="background-color: rgba(46, 125, 91, 0.1); color: var(--accent-housekeeping);">Housekeeper</span></td>
                             <td>Day Shift</td>
                             <td><span class="cogstay-badge success">Active</span></td>
-                            <td>
+                            <td style="display: flex; gap: 6px;">
                                 <button class="btn btn-secondary btn-sm" onclick="showToast('Action Logged', 'Editing Mary Poppins shift.', 'info')">Configure</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: var(--color-danger); color: white; border: none;" onclick="removeStaffRow(this, 'Mary Poppins')"><i class="fa-solid fa-user-minus"></i> Remove</button>
                             </td>
                         </tr>
                         <tr>
@@ -102,8 +107,9 @@
                             <td><span class="cogstay-badge info" style="background-color: rgba(46, 125, 91, 0.1); color: var(--accent-housekeeping);">Housekeeper</span></td>
                             <td>Night Shift</td>
                             <td><span class="cogstay-badge success">Active</span></td>
-                            <td>
+                            <td style="display: flex; gap: 6px;">
                                 <button class="btn btn-secondary btn-sm" onclick="showToast('Action Logged', 'Editing Bruce Wayne shift.', 'info')">Configure</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: var(--color-danger); color: white; border: none;" onclick="removeStaffRow(this, 'Bruce Wayne')"><i class="fa-solid fa-user-minus"></i> Remove</button>
                             </td>
                         </tr>
                         <tr>
@@ -112,8 +118,9 @@
                             <td><span class="cogstay-badge info" style="background-color: rgba(46, 125, 91, 0.1); color: var(--accent-housekeeping);">Housekeeper</span></td>
                             <td>On Call</td>
                             <td><span class="cogstay-badge warning">On Leave</span></td>
-                            <td>
+                            <td style="display: flex; gap: 6px;">
                                 <button class="btn btn-secondary btn-sm" onclick="showToast('Action Logged', 'Editing Peter Parker shift.', 'info')">Configure</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: var(--color-danger); color: white; border: none;" onclick="removeStaffRow(this, 'Peter Parker')"><i class="fa-solid fa-user-minus"></i> Remove</button>
                             </td>
                         </tr>
                     </tbody>

@@ -65,3 +65,33 @@ function initSettingsToggles() {
         });
     });
 }
+
+// 3. Remove Room from active inventory
+function removeRoomRow(btn, roomNo) {
+    if (confirm(`Are you sure you want to remove ${roomNo} from active inventory?`)) {
+        const row = btn.closest('tr');
+        row.style.transition = 'all 0.5s ease';
+        row.style.opacity = 0;
+        setTimeout(() => {
+            row.remove();
+            showToast('Room Removed', `${roomNo} was successfully removed from inventory.`, 'success');
+        }, 500);
+    }
+}
+
+// 4. Remove Employee and de-authenticate credentials
+function removeStaffRow(btn, employeeName) {
+    if (employeeName === 'John Doe') {
+        showToast('Lock Alert', 'System administrator account cannot be deleted.', 'warning');
+        return;
+    }
+    if (confirm(`Are you sure you want to revoke credentials and remove employee ${employeeName}?`)) {
+        const row = btn.closest('tr');
+        row.style.transition = 'all 0.5s ease';
+        row.style.opacity = 0;
+        setTimeout(() => {
+            row.remove();
+            showToast('Employee Removed', `${employeeName} was removed from the operations roster.`, 'success');
+        }, 500);
+    }
+}

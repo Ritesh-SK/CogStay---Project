@@ -39,7 +39,7 @@ function initCheckoutCalculator() {
             const roomCost = parseFloat(roomCostText.innerText.replace(/[^0-9.]/g, '')) || 0;
             
             const subtotal = roomCost + minibarCost + damagesCost;
-            totalCostText.innerText = '$' + subtotal.toFixed(2);
+            totalCostText.innerText = '₹' + subtotal.toFixed(2);
         };
 
         minibarCostInput.addEventListener('input', updateTotals);

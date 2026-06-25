@@ -63,17 +63,47 @@
         </div>
     </div>
 
-    <!-- Right Column: RFID Swiper simulation -->
+    <!-- Right Column: Assign Keys to Customer -->
     <div>
         <div class="cogstay-card">
             <div class="cogstay-card-header">
-                <h3 class="cogstay-card-title"><i class="fa-solid fa-microchip"></i> Key Card Encoder</h3>
+                <h3 class="cogstay-card-title"><i class="fa-solid fa-key"></i> Assign Keys to Customer</h3>
             </div>
             <div class="cogstay-card-body" style="display: flex; flex-direction: column; gap: 16px;">
-                <p style="font-size: 13px; color: var(--color-text-muted); line-height: 1.4;">Insert RFID card into swiper encoder and click box below to program the door lock credentials.</p>
-                <div class="keycard-swiper-placeholder">
-                    <i class="fa-solid fa-credit-card" style="font-size: 32px; margin-bottom: 10px;"></i>
-                    <p>Click here to Program RFID Key</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); line-height: 1.4;">Specify room details and assign physical key card credentials for hand-over.</p>
+                
+                <div class="cogstay-form-group" style="margin-bottom: 12px;">
+                    <label class="cogstay-form-label">Room Number / Booking Ref</label>
+                    <input type="text" class="cogstay-form-control" value="Room 301 / CS-9288" readonly />
+                </div>
+                
+                <div class="cogstay-form-group" style="margin-bottom: 12px;">
+                    <label class="cogstay-form-label">Guest Name</label>
+                    <input type="text" class="cogstay-form-control" value="Emily Watson" readonly />
+                </div>
+
+                <div class="cogstay-form-group" style="margin-bottom: 12px;">
+                    <label class="cogstay-form-label">Assigned Key/Card Number</label>
+                    <input type="text" class="cogstay-form-control" id="assignedKeyCard" placeholder="e.g. KC-301-A" value="KC-301-A" required />
+                </div>
+
+                <div class="cogstay-form-row" style="margin-bottom: 12px;">
+                    <div class="cogstay-form-group" style="margin-bottom: 0;">
+                        <label class="cogstay-form-label">Issue Date/Time</label>
+                        <input type="text" class="cogstay-form-control" value="2026-06-26 12:00 PM" readonly />
+                    </div>
+                    <div class="cogstay-form-group" style="margin-bottom: 0;">
+                        <label class="cogstay-form-label">Status</label>
+                        <div style="margin-top: 8px;">
+                            <span class="cogstay-badge success" style="background-color: rgba(46, 125, 91, 0.1); color: var(--accent-housekeeping); padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">Key Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                    <button type="button" class="btn btn-primary" style="background-color: var(--accent-frontdesk); width: 100%; justify-content: center; display: inline-flex; gap: 8px;" onclick="showToast('Key Assigned', 'Key Card KC-301-A has been assigned to Emily Watson.', 'success')">
+                        <i class="fa-solid fa-check"></i> Confirm Key Handover
+                    </button>
                 </div>
             </div>
         </div>
