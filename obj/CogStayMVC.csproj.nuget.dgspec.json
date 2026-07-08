@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ritesh SK\\Desktop\\CogStay - Hotel Management\\CogStayMVC.csproj": {}
+    "C:\\Users\\2506789\\OneDrive - Cognizant\\Desktop\\CogStays\\CogStay---Project\\CogStayMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ritesh SK\\Desktop\\CogStay - Hotel Management\\CogStayMVC.csproj": {
+    "C:\\Users\\2506789\\OneDrive - Cognizant\\Desktop\\CogStays\\CogStay---Project\\CogStayMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ritesh SK\\Desktop\\CogStay - Hotel Management\\CogStayMVC.csproj",
+        "projectUniqueName": "C:\\Users\\2506789\\OneDrive - Cognizant\\Desktop\\CogStays\\CogStay---Project\\CogStayMVC.csproj",
         "projectName": "CogStayMVC",
-        "projectPath": "C:\\Users\\Ritesh SK\\Desktop\\CogStay - Hotel Management\\CogStayMVC.csproj",
-        "packagesPath": "C:\\Users\\Ritesh SK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ritesh SK\\Desktop\\CogStay - Hotel Management\\obj\\",
+        "projectPath": "C:\\Users\\2506789\\OneDrive - Cognizant\\Desktop\\CogStays\\CogStay---Project\\CogStayMVC.csproj",
+        "packagesPath": "C:\\Users\\2506789\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2506789\\OneDrive - Cognizant\\Desktop\\CogStays\\CogStay---Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Ritesh SK\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\2506789\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +52,28 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
